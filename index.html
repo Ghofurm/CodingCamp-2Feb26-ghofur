@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>TO-DO LIST</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>TO-DO LIST</h1>
+      </header>
+
+      <div class="form-container">
+        <form id="todoForm">
+          <div class="form-group">
+            <label for="todoInput">TUGAS</label>
+            <input
+              type="text"
+              id="todoInput"
+              placeholder="Masukkan tugas..."
+              maxlength="200" />
+            <span
+              class="error-message"
+              id="todoError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="dateInput">TANGGAL</label>
+            <input type="date" id="dateInput" />
+            <span
+              class="error-message"
+              id="dateError"></span>
+          </div>
+
+          <button type="submit" class="btn-add">
+            TAMBAH TUGAS
+          </button>
+        </form>
+      </div>
+
+      <div class="filter-container">
+        <button
+          class="btn-filter active"
+          data-filter="all">
+          SEMUA
+        </button>
+        <button
+          class="btn-filter"
+          data-filter="today">
+          HARI INI
+        </button>
+        <button
+          class="btn-filter"
+          data-filter="upcoming">
+          MENDATANG
+        </button>
+        <button
+          class="btn-filter"
+          data-filter="past">
+          TERLEWAT
+        </button>
+      </div>
+
+      <div class="todo-list" id="todoList">
+        <!-- Daftar tugas akan dimasukkan di sini -->
+      </div>
+
+      <div class="empty-state" id="emptyState">
+        <p>BELUM ADA TUGAS</p>
+        <p>TAMBAHKAN TUGAS UNTUK MEMULAI</p>
+      </div>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

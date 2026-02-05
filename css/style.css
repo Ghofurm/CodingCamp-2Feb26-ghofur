@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Courier New", monospace;
+  background-color: #ffffff;
+  color: #000000;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+header {
+  border: 5px solid #000000;
+  padding: 30px;
+  margin-bottom: 30px;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+header h1 {
+  font-size: 48px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+.form-container {
+  border: 5px solid #000000;
+  padding: 30px;
+  margin-bottom: 30px;
+  background-color: #ffffff;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  letter-spacing: 2px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 15px;
+  border: 3px solid #000000;
+  background-color: #ffffff;
+  font-family: "Courier New", monospace;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.form-group input:focus {
+  border: 3px solid #000000;
+  box-shadow: 5px 5px 0px #000000;
+}
+
+.error-message {
+  display: block;
+  color: #000000;
+  font-size: 12px;
+  margin-top: 5px;
+  font-weight: bold;
+  min-height: 18px;
+}
+
+.btn-add {
+  width: 100%;
+  padding: 18px;
+  border: 3px solid #000000;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "Courier New", monospace;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-add:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.btn-add:active {
+  transform: translate(2px, 2px);
+}
+
+.filter-container {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.btn-filter {
+  padding: 12px 24px;
+  border: 3px solid #000000;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-filter:hover {
+  background-color: #f0f0f0;
+}
+
+.btn-filter.active {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.btn-filter:active {
+  transform: translate(2px, 2px);
+}
+
+.todo-list {
+  display: none;
+}
+
+.todo-list.show {
+  display: block;
+}
+
+.todo-item {
+  border: 3px solid #000000;
+  padding: 20px;
+  margin-bottom: 15px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.todo-content {
+  flex: 1;
+}
+
+.todo-text {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  word-break: break-word;
+}
+
+.todo-date {
+  font-size: 14px;
+  color: #000000;
+  font-weight: normal;
+}
+
+.todo-date.overdue {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.btn-delete {
+  padding: 12px 20px;
+  border: 3px solid #000000;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.btn-delete:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.btn-delete:active {
+  transform: translate(2px, 2px);
+}
+
+.empty-state {
+  border: 3px solid #000000;
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.empty-state p {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.empty-state p:last-child {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 32px;
+    letter-spacing: 2px;
+  }
+
+  .form-container {
+    padding: 20px;
+  }
+
+  .filter-container {
+    gap: 10px;
+  }
+
+  .btn-filter {
+    flex: 1;
+    min-width: calc(50% - 5px);
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .todo-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-delete {
+    width: 100%;
+  }
+}
